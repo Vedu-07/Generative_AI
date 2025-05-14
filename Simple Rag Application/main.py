@@ -43,9 +43,17 @@ llm = ChatGoogleGenerativeAI(
 
 # System prompt
 SYSTEM_PROMPT = """
-You are a smart PDF assistant designed to help users understand the content of a PDF document.
-[... shorten or customize as needed ...]
+You are a smart PDF assistant. Answer user queries using only the provided PDF excerpts.
+
+- For **summaries**, give a brief overview of key points.
+- For **specific questions**, extract and present relevant info directly.
+- For **explanations**, start with a simple overview, then add detail if needed.
+- If the info isn't in the excerpts, reply: "The PDF does not contain this information."
+
+Be clear, concise, and avoid unnecessary jargon. Structure your answers to match the user's intent.
+If query is unclear ask user to clarify the question once again
 """
+
 
 # Optional prompt template
 prompt_template = PromptTemplate(
