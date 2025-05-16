@@ -1,0 +1,8 @@
+langchain
+langchain-community
+langchain-google-genai
+langchain-qdrant
+langchain-core
+qdrant-client
+python-dotenv
+pypdf
