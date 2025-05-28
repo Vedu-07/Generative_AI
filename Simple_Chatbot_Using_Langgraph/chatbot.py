@@ -109,10 +109,11 @@ graph = graph_builder.compile()
 
 def call_graph():
     state = {
-        "user_message": "How Are You Broo??",
+        "user_message": "Write code to add 2 numbers in python?",
         "ai_message": "",
         "is_coding_question": False
     }
+    print("User Query:", state["user_message"])  
     result = graph.invoke(state)
     print("Final Result:", result["ai_message"])
 
